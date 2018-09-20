@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Link to Moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Bootstrap/CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- LINK TO FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="jumbotron" style="margin-top:20px; text-align:center;  font-weight: bold ">Catch That Train</div>
+    </div>
+    <div class="container" id= "input-box" style="margin-bottom:5%">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Add A Train To The Schedule</h3>
+            </div>
+
+            <div class="panel-body">
+                <form>
+                    <div class="form-group">
+                        <label>TRAIN NAME</label>
+                        <input type="text" class="form-control" id="train">
+                    </div>
+                    <div class="form-group">
+                        <label>DESTINATION</label>
+                        <input type="text" class="form-control" id="city">
+                    </div>
+                    <div class="form-group">
+                        <label>FIRST TRAIN LEAVES AT (HH:MM)</label>
+                        <input type="text" class="form-control" id="first-leaves">
+                    </div>
+                    <div class="form-group">
+                        <label>LEAVES EVERY (IN MINUTES)</label>
+                        <input type="text" class="form-control" id="leaves-every">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="add-button-x">ADD TRAIN</button>
+                </form>
+            </div>
+        </div>
+        <!--Train Results-->
+
+        <div class="row">
+            <div class="col-lg-11">
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <table class="table table-hover" id="train-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Traveling to</th>
+                                    <th>Next Train Leaves</th>
+                                    <th>MINUTES AWAY</th>
+                                </tr>
+                            </thead>
+                            
+                            <!--results dump below-->
+                            <tbody></tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    
+    
+
+
+
+    
+</body>
+
+</html>

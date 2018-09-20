@@ -1,1 +1,19 @@
+.jumbotron {
 
+font-family: 'Indie Flower', cursive;
+background-color: cornflowerblue;
+color: antiquewhite;
+position: relative;
+font-size: 100px;
+
+}
+.form-group {
+    font-family: Arial, Helvetica, sans-serif;   
+}
+
+#input-box {
+    background-color: rgb(147, 205, 252);
+    border-radius: 25px;
+    padding: 20px;
+
+}
