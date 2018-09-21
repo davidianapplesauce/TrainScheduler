@@ -11,5 +11,5 @@
 
   $("#add-button-x").on("click", function(){
       var trainName = $("#train").val().trim();
-      console.log(trainName);
+      console.log(trainName); //not working...
   })
